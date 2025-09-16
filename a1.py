@@ -144,7 +144,40 @@ Format the output neatly
 def mult_table(number):
     print("Multiplication table of " + str(number) + ":")
     for i in range(10):
-        print(str(number) + " X " + str(i + 1) + " = " str(int(number * (i+1))))
+        print(str(number) + " X " + str(i + 1) + " = " + str(number * (i+1)))
+
+
+"""
+Problem 4: Simple Calculator Function (Functions & Extended Conditionals)
+Concepts: Functions, parameters, return values, string methods
+Write a calculator program with separate functions for each operation.
+Instructions:
+
+Create functions for: add, subtract, multiply, divide
+Create a main function that asks for two numbers and an operation
+Use the operation input to call the appropriate function
+Return and display the result
+"""
+
+def get_numbers():
+    answer = "0"
+    n1 = int(input("first number: "))
+    n2 = int(input("second number: "))
+    symbol = input("enter + - / or *: ")
+    if symbol == "+":
+        answer = n1 + n2
+    elif symbol == "-":
+        answer = n1 - n2
+    elif symbol == "/":
+        answer = n1 / n2
+    elif symbol == "*":
+        answer = n1 * n2
+    else:
+        answer = "syntax error"
+    print (answer)
+    return answer
+    
+
 # =============================================================================
 # PART 3: TESTING YOUR SOLUTIONS
 # =============================================================================
@@ -167,7 +200,7 @@ print(f"is_even(7): {is_even(7)}")  # Should print False
 
 
 print("Testing Problem 1:")
-"""temp_convert()"""
+temp_convert()
 
 
 print("\nTesting Problem 2:")
@@ -175,15 +208,15 @@ print (grade_calculator(64))
 
 
 print("\nTesting Problem 3:")
-"""number_guesser()"""
+number_guesser()
 
 
 print("\nTesting Problem 4:")
-mult_table(5)
+mult_table(7)
 
 
 print("\nTesting Problem 5:")
-# Add your tests here
+get_numbers()
 
 
 
